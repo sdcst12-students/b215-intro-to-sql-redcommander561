@@ -13,6 +13,8 @@ Writing your data/variables to a file is a quick way of putting data in non-vola
 
 SQL Databases (Structured Query Languages) have become the standard for storing data in a way that is scalable (works for large numbers) as well as fast, although it's like learning a new language in many ways.  We will be looking at SQL databases to see how we can create new data sets (called tables), read from them, search them, update existing entries or add new entries.
 
+We will be using a basic version that connects to a file based database using SQLite3.  Complete documentation is available at https://www.tutorialspoint.com/sqlite/sqlite_python.htm, but you may have more success starting with simple code snippets or tutorials
+
 
 <Description>
 
