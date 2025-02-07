@@ -33,10 +33,41 @@ We can also issue queries/commands to the database, but note that each command n
 
 Some of the commands we want to experiment with today include:
 ```
-select name from sqlite_master where type='table';
-PRAGMA table_info(customers);
+.tables
+.schema customers;
+
 ```
 
+```
+select name from sqlite_master where type='table';
+```
+```
+PRAGMA table_info(customers);
+```
+```
+create table if not exists customers (
+    id integer primary key autoincrement,
+    name tinytext,
+    email tinytext,
+    cnum int);
+```
+```
+select name from customers
+select name,cnum from customers
+select name from customers where cnum > 10
+select name from customers order by name asc
+select * from customers order by cnum desc
+```
+```
+update customers set email='bassist@monkees.ca',cnum=80 where name='Peter Nesmith'
+update customers set cnum=10 where email='miley@cyrus.com'
+```
+```
+insert into customers (name,email,cnum) values ('Benjamin Tantalus','benjamin@tantalus.com',1000)
+```
+```
+delete from customers where email='Miley Cyrus'
+```
 
 Assignment:
 
